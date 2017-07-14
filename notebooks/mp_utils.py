@@ -19,7 +19,7 @@ col = [[0.9047, 0.1918, 0.1988],
 marker = ['v','o','d','^','s','o','+']
 ls = ['-','-','-','-','-','s','--','--']
 
-def generate_times(df, T=None, seed=None, censor=False):
+def generate_times(df, T=None, T_to_death=None, seed=None, censor=False):
     # generate a dictionary based off of the analysis type desired
     # creates "windowtime" - the time at the end of the window
 
@@ -62,6 +62,14 @@ def generate_times(df, T=None, seed=None, censor=False):
     else:
         df['windowtime'] = np.floor(tau*(df['endtime']))
 
+
+    if T_to_death is not None:
+        # fix the time for those who die to be T_to_death hours from death
+        # first, isolate patients where they were in the ICU T hours before death
+        idxInICU = (df['deathtime_hours'] - df['dischtime_hours'])<=T_to_death
+        # for these patients, set the time to be T_to_death hours
+        df.loc[idxInICU, 'windowtime'] = df.loc[idxInICU,'deathtime_hours'] - T_to_death
+
     windowtime_dict = df.set_index('icustay_id')['windowtime'].to_dict()
     return windowtime_dict
 
@@ -78,16 +86,16 @@ def generate_times_before_death(df, T=None, T_to_death=None, seed=None):
     if seed is None:
         print('Using default seed 111.')
         seed=111
+    df['endtime'] = df['dischtime_hours']
+    idx = (~df['deathtime_hours'].isnull()) & (df['deathtime_hours']<df['dischtime_hours'])
+    df.loc[idx,'endtime'] = df.loc[idx,'deathtime_hours']
+
 
     np.random.seed(seed)
 
     # df is centered on intime (as t=0)
     # we need to ensure a random time is at least T hours from death/discharge
-
     tau = np.random.rand(df.shape[0])
-    df['endtime'] = df['dischtime_hours']
-    idx = (~df['deathtime_hours'].isnull()) & (df['deathtime_hours']<df['dischtime_hours'])
-    df.loc[idx,'endtime'] = df.loc[idx,'deathtime_hours']
 
     if T is not None:
         # extract window at least T hours before discharge/death
@@ -101,7 +109,7 @@ def generate_times_before_death(df, T=None, T_to_death=None, seed=None):
     if T_to_death is not None:
         # fix the time for those who die to be T_to_death hours from death
         # first, isolate patients where they were in the ICU T hours before death
-        idxInICU = (df['dischtime_hours'] - df['deathtime_hours'])<=T_to_death
+        idxInICU = (df['deathtime_hours'] - df['dischtime_hours'])<=T_to_death
         # for these patients, set the time to be T_to_death hours
         df.loc[idxInICU, 'windowtime'] = df.loc[idxInICU,'deathtime_hours'] - T_to_death
 
@@ -129,33 +137,33 @@ def print_cm(y, yhat):
 def vars_of_interest():
     # we extract the min/max for these covariates
     var_min = ['heartrate', 'sysbp', 'diasbp', 'meanbp',
-                'resprate', 'tempc', 'spo2', 'glucose_chart']
+                'resprate', 'tempc', 'spo2']
     var_max = var_min
     var_min.append('gcs')
     #var_max.extend(['rrt','vasopressor','vent'])
 
     # we extract the first/last value for these covariates
     var_first = ['heartrate', 'sysbp', 'diasbp', 'meanbp',
-                'resprate', 'tempc', 'spo2', 'glucose_chart']
+                'resprate', 'tempc', 'spo2']
 
     var_last = var_first
     var_last.extend(['gcsmotor','gcsverbal','gcseyes','endotrachflag','gcs'])
 
-    var_first_early = ['bg_so2', 'bg_po2', 'bg_pco2',
+    var_first_early = ['bg_po2', 'bg_pco2', #'bg_so2'
             #'bg_fio2_chartevents', 'bg_aado2_calc',
             #'bg_fio2', 'bg_aado2',
-            'bg_pao2fio2ratio', 'bg_ph', 'bg_baseexcess', 'bg_bicarbonate',
-            'bg_totalco2', 'bg_hematocrit', 'bg_hemoglobin',
+            'bg_pao2fio2ratio', 'bg_ph', 'bg_baseexcess', #'bg_bicarbonate',
+            'bg_totalco2', #'bg_hematocrit', 'bg_hemoglobin',
             'bg_carboxyhemoglobin', 'bg_methemoglobin',
-            'bg_chloride', 'bg_calcium', 'bg_temperature',
-            'bg_potassium', 'bg_sodium', 'bg_lactate',
-            'bg_glucose',
+            #'bg_chloride', 'bg_calcium', 'bg_temperature',
+            #'bg_potassium', 'bg_sodium', 'bg_lactate',
+            #'bg_glucose',
             # 'bg_tidalvolume', 'bg_intubated', 'bg_ventilationrate', 'bg_ventilator',
             # 'bg_peep', 'bg_o2flow', 'bg_requiredo2',
             # begin lab values
             'aniongap', 'albumin', 'bands', 'bicarbonate', 'bilirubin', 'creatinine',
             'chloride', 'glucose', 'hematocrit', 'hemoglobin', 'lactate', 'platelet',
-            'potassium', 'ptt', 'inr', 'pt', 'sodium', 'bun', 'wbc']
+            'potassium', 'ptt', 'inr', 'sodium', 'bun', 'wbc']
 
     var_last_early = var_first_early
     # fourth set of variables
@@ -271,8 +279,8 @@ def get_design_matrix(df, time_dict, W=8, W_extra=24):
     # update the column names
     df_first.columns = [x + '_first' for x in df_first.columns]
     df_last.columns = [x + '_last' for x in df_last.columns]
-    df_first_early.columns = [x + '_first' for x in df_first_early.columns]
-    df_last_early.columns = [x + '_last' for x in df_last_early.columns]
+    df_first_early.columns = [x + '_first_early' for x in df_first_early.columns]
+    df_last_early.columns = [x + '_last_early' for x in df_last_early.columns]
     df_min.columns = [x + '_min' for x in df_min.columns]
     df_max.columns = [x + '_max' for x in df_max.columns]
     df_sum.columns = [x + '_sum' for x in df_sum.columns]
