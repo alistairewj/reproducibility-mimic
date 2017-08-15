@@ -7,7 +7,7 @@ with tr as
 (
 select hadm_id, icustay_id, intime, outtime, curr_careunit
 , ROW_NUMBER() over (partition by hadm_id order by intime desc) as rn
-from mimiciii.transfers
+from transfers
 where outtime is not null
 )
 , ds as
