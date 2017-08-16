@@ -1,23 +1,23 @@
-Cohort,StudyDetail,N_Study,N_Repro,Y_Study,Y_Repro,Model,Study,GB,LR,Notes,pages,split,open_code
-caballero2015dynamically,$W$=24,11648,11648,-,13.01,NonLin,0.8657,0.906,0.88616,KF,10,80/20,0
-caballero2015dynamically,$W$=48,11648,11648,-,13.01,NonLin,0.7985,0.9227,0.9034,KF,10,80/20,0
-caballero2015dynamically,$W$=72,11648,11648,-,13.01,NonLin,0.7385,0.9314,0.9144,KF,10,80/20,0
-calvert2016computational,,3054,1985,12.84,13.8,NonLin,0.934,0.9565,0.9025,Kernel,6,4-fold CV,0
-calvert2016using,,9683,18396,10.68,14.71,NonLin,0.88,0.9333,0.9110,Kernel,6,4-fold CV,0
-celi2012database,AKI,1400,4741,30.7,23.92,NonLin,0.875,0.8812,0.8706,ANN,11,70/30,0
-celi2012database,SAH,223,350,25.6,24.86,NonLin,0.958,0.8929,0.8289,BayesNet,11,70/30,0
-che2016recurrent,(b),4000,4000,13.85,14.35,NonLin,0.8424,0.8461,0.8273,GRU-D,14,5-fold CV,0
-ding2016mortality,,4000,4000,13.85,14.35,NonLin,0.8177,0.8461,0.8273,ELM,6,5-fold CV,0
-ghassemi2014unfolding,$W$=12,19308,28172,10.84,12.2,Lin,0.84,0.8846,0.8609,SVM-Lin,20,5-fold CV,0
-ghassemi2014unfolding,$W$=24,19308,23442,10.80,12.92,Lin,0.841,0.8841,0.8651,SVM-Lin,20,5-fold CV,0
-ghassemi2015multivariate,,10202,21969,-,13.51,NonLin,0.812,0.8781,0.8591,MTGP,20,5-fold CV,0
-grnarova2016neural,,31244,29572,13.82,12.49,NonLin,0.963,0.9819,0.9765,DNN,5,80/10/10,0
-harutyunyan2017multitask,,42276,45493,-,10.54,NonLin,0.8625,0.9406,0.9286,MLSTM,11,70/15/15,1
-hoogendoorn2016prediction,,13923,17545,-,14.97,NonLin,0.841,0.8797,0.8618,MLSTM,5,5-fold CV,1
-johnson2012patient,,4000,4000,-,14.35,NonLin,0.8602,0.8461,0.8273,BF,4,5-fold CV,0
-johnson2014data,,4000,4000,-,14.35,Lin,0.8457,0.8461,0.8273,LR,4,5-fold CV,0
-joshi2012prognostic,,10066,10696,12.0,4.14,Lin,0.89,0.8872,0.8716,LR,8,5-fold CV,0
-lee2015customization,,17490,20961,17.73,17.86,Lin,0.775,0.8655,0.8488,LR,10,10-fold CV,0
-lehman2012risk,,14739,21738,14.6,12.32,Lin,0.82,0.888,0.8694,LR,7,10-fold CV,0
-pirracchio2015mortality,,24508,28795,12.2,12.72,NonLin,0.88,0.9070,0.8897,SuperLearner,32,10-fold CV,0
-ripoll2014sepsis,,2002,2251,21.10,39.63,NonLin,0.8223,0.7900,0.7647,SVM-Quot - CV and test set,29,80/20,0
+Cohort,StudyDetail,N_Study,N_Repro,Y_Study,Y_Repro,Model,Study,GB,LR,Notes,pages,split,open_code,mimic
+caballero2015dynamically,$W$=24,11648,11648,-,13.01,NonLin,0.8657,0.906,0.88616,KF,10,80/20,0,2
+caballero2015dynamically,$W$=48,11648,11648,-,13.01,NonLin,0.7985,0.9227,0.9034,KF,10,80/20,0,2
+caballero2015dynamically,$W$=72,11648,11648,-,13.01,NonLin,0.7385,0.9314,0.9144,KF,10,80/20,0,2
+calvert2016computational,,3054,1985,12.84,13.8,NonLin,0.934,0.9565,0.9025,Kernel,6,4-fold CV,0,3
+calvert2016using,,9683,18396,10.68,14.71,NonLin,0.88,0.9333,0.9110,Kernel,6,4-fold CV,0,3
+celi2012database,AKI,1400,4741,30.7,23.92,NonLin,0.875,0.8812,0.8706,ANN,11,70/30,0,2
+celi2012database,SAH,223,350,25.6,24.86,NonLin,0.958,0.8929,0.8289,BayesNet,11,70/30,0,2
+che2016recurrent,(b),4000,4000,13.85,14.35,NonLin,0.8424,0.8461,0.8273,GRU-D,14,5-fold CV,0,3
+ding2016mortality,,4000,4000,13.85,14.35,NonLin,0.8177,0.8461,0.8273,ELM,6,5-fold CV,0,2
+ghassemi2014unfolding,$W$=12,19308,28172,10.84,12.2,Lin,0.84,0.8846,0.8609,SVM-Lin,20,5-fold CV,0,2
+ghassemi2014unfolding,$W$=24,19308,23442,10.80,12.92,Lin,0.841,0.8841,0.8651,SVM-Lin,20,5-fold CV,0,2
+ghassemi2015multivariate,,10202,21969,-,13.51,NonLin,0.812,0.8781,0.8591,MTGP,20,5-fold CV,0,2
+grnarova2016neural,,31244,29572,13.82,12.49,NonLin,0.963,0.9819,0.9765,DNN,5,80/10/10,0,3
+harutyunyan2017multitask,,42276,45493,-,10.54,NonLin,0.8625,0.9406,0.9286,MLSTM,11,70/15/15,1,3
+hoogendoorn2016prediction,,13923,17545,-,14.97,NonLin,0.841,0.8797,0.8618,MLSTM,5,5-fold CV,1,2
+johnson2012patient,,4000,4000,-,14.35,NonLin,0.8602,0.8461,0.8273,BF,4,5-fold CV,0,2
+johnson2014data,,4000,4000,-,14.35,Lin,0.8457,0.8461,0.8273,LR,4,5-fold CV,0,2
+joshi2012prognostic,,10066,10696,12.0,4.14,Lin,0.89,0.8872,0.8716,LR,8,5-fold CV,0,2
+lee2015customization,,17490,20961,17.73,17.86,Lin,0.775,0.8655,0.8488,LR,10,10-fold CV,0,2
+lehman2012risk,,14739,21738,14.6,12.32,Lin,0.82,0.888,0.8694,LR,7,10-fold CV,0,2
+pirracchio2015mortality,,24508,28795,12.2,12.72,NonLin,0.88,0.9070,0.8897,SuperLearner,32,10-fold CV,0,2
+ripoll2014sepsis,,2002,2251,21.10,39.63,NonLin,0.8223,0.7900,0.7647,SVM-Quot - CV and test set,29,80/20,0,2

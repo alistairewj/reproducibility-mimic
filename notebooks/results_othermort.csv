@@ -1,17 +1,17 @@
-Cohort,StudyDetail,N_Study,N_Repro,Y_Study,Y_Repro,Model,Study,GB,LR,Notes,pages,split,open_code
-che2016recurrent,$^1$ (a),19714,26508,8.7,19.0,NonLin,0.8527,0.8675,0.7500,GRU-D,14,5-fold CV,0
-hug2009icu,$^2$,10066,10696,17.0,6.35,Lin,0.879,0.8545,0.8479,LR,5,70/30,1
-luo2016predicting,$^2$,7863,8931,17.0,6.45,NonLin,0.848,0.8260,0.8249,NMF,9,50/50,0
-joshi2016identifiable,$^2$,17000,26508,-,14.95,Lin,0.72,0.8759,0.8539,RLR,24,5-fold CV,0
-ghassemi2014unfolding,$^3$ W=12,19308,28172,3.23,16.92,Lin,0.761,0.8687,0.8447,SVM-Lin,20,5-fold CV,0
-grnarova2016neural,$^3$,31244,29572,3.70,16.36,NonLin,0.858,0.9590,0.9528,DNN,5,80/10/10,0
-lee2015personalized,$^3$,17490,20961,15.1,12.69,Lin,0.784,0.8828,0.8643,LR,13,10-fold CV,0
-lee2015customization,$^3$,17490,20961,23.56,31.57,Lin,0.762,0.8442,0.8240,LR,10,10-fold CV,0
-lee2017patient,$^3$,17152,23443,15.1,17.94,Lin,0.815,0.8674,0.8492,LR,4,10-fold CV,0
-luo2016interpretable,$^3$,18412,27747,3.4,17.05,NonLin,0.86,0.9289,0.9193,SVM-BRF,9,50/50,0
-wojtusiak2017c,$^3$,21651,22699,,7.74,NonLin,0.734,0.7957,0.7901,RF,9,80/20,0
-luo2016interpretable,$^4$,18412,27747,9.5,25.17,NonLin,0.842,0.8921,0.8770,SVM-RBF,9,50/50,0
-ghassemi2014unfolding,$^5$ W=12,19308,28172,3.34,29.75,Lin,0.743,0.8450,0.8201,SVM-Lin,20,5-fold CV,0
-ghassemi2015multivariate,$^5$,10202,21969,-,32.35,NonLin,0.686,0.8403,0.8194,MTGP,20,5-fold CV,0
-grnarova2016neural,$^5$,31244,29572,12.06,24.63,NonLin,0.853,0.9117,0.9009,DNN,5,80/10/10,0
-lee2015customization,$^6$,17152,23443,43.82 ,17.94,Lin,0.83,0.8674,0.8492,LR,10,10-fold CV,0
+Cohort,StudyDetail,N_Study,N_Repro,Y_Study,Y_Repro,Model,Study,GB,LR,Notes,pages,split,open_code,mimic
+che2016recurrent,$^1$ (a),19714,26508,8.7,19.0,NonLin,0.8527,0.8675,0.7500,GRU-D,14,5-fold CV,0,2
+hug2009icu,$^2$,10066,10696,17.0,6.35,Lin,0.879,0.8545,0.8479,LR,5,70/30,1,2
+luo2016predicting,$^2$,7863,8931,17.0,6.45,NonLin,0.848,0.8260,0.8249,NMF,9,50/50,0,2
+joshi2016identifiable,$^2$,17000,26508,-,14.95,Lin,0.72,0.8759,0.8539,RLR,24,5-fold CV,0,2
+ghassemi2014unfolding,$^3$ W=12,19308,28172,3.23,16.92,Lin,0.761,0.8687,0.8447,SVM-Lin,20,5-fold CV,0,2
+grnarova2016neural,$^3$,31244,29572,3.70,16.36,NonLin,0.858,0.9590,0.9528,DNN,5,80/10/10,0,3
+lee2015personalized,$^3$,17490,20961,15.1,12.69,Lin,0.784,0.8828,0.8643,LR,13,10-fold CV,0,2
+lee2015customization,$^3$,17490,20961,23.56,31.57,Lin,0.762,0.8442,0.8240,LR,10,10-fold CV,0,2
+lee2017patient,$^3$,17152,23443,15.1,17.94,Lin,0.815,0.8674,0.8492,LR,4,10-fold CV,0,2
+luo2016interpretable,$^3$,18412,27747,3.4,17.05,NonLin,0.86,0.9289,0.9193,SVM-BRF,9,50/50,0,2
+wojtusiak2017c,$^3$,21651,22699,,7.74,NonLin,0.734,0.7957,0.7901,RF,9,80/20,0,3
+luo2016interpretable,$^4$,18412,27747,9.5,25.17,NonLin,0.842,0.8921,0.8770,SVM-RBF,9,50/50,0,2
+ghassemi2014unfolding,$^5$ W=12,19308,28172,3.34,29.75,Lin,0.743,0.8450,0.8201,SVM-Lin,20,5-fold CV,0,2
+ghassemi2015multivariate,$^5$,10202,21969,-,32.35,NonLin,0.686,0.8403,0.8194,MTGP,20,5-fold CV,0,2
+grnarova2016neural,$^5$,31244,29572,12.06,24.63,NonLin,0.853,0.9117,0.9009,DNN,5,80/10/10,0,3
+lee2015customization,$^6$,17152,23443,43.82 ,17.94,Lin,0.83,0.8674,0.8492,LR,10,10-fold CV,0,2
