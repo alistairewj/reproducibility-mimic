@@ -1,14 +1,24 @@
 -- tables required before generating the data matters tables
 
--- for cohort
-mp_code_status
-mp_bg_art
+\echo 'Step 1 of 3: Generating the mimic-code concepts required'
+\i ../mimic-code/concepts/make-concepts.sql
 
--- for data
-mp_data
-mp_static_data
+\echo 'Step 2 of 3: Generating the mortality-prediction concepts required'
+-- these two must be run first
+\i ../mortality-prediction/queries/cohort.sql
+\i ../mortality-prediction/queries/hourly-cohort.sql
+-- order doesn't matter for the rest
+\i ../mortality-prediction/queries/bg.sql
+\i ../mortality-prediction/queries/code-status.sql
+\i ../mortality-prediction/queries/colloid-bolus.sql
+\i ../mortality-prediction/queries/crystalloid-bolus.sql
+\i ../mortality-prediction/queries/gcs.sql
+\i ../mortality-prediction/queries/lab.sql
+\i ../mortality-prediction/queries/static_data.sql
+\i ../mortality-prediction/queries/uo.sql
+\i ../mortality-prediction/queries/vital.sql
 
-
+\echo 'Step 3 of 3: Generating reproducibility concepts present here'
 \i dm_cohort.sql
 \i dm_word_count.sql
 \i dm_static_data.sql
