@@ -1,3 +1,4 @@
 [submodule "mimic-code"]
 	path = mimic-code
 	url = https://github.com/MIT-lcp/mimic-code
+	shallow = true
