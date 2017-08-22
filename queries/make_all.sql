@@ -1,7 +1,8 @@
 -- tables required before generating the data matters tables
 
 \echo 'Step 1 of 3: Generating the mimic-code concepts required'
-\i ../mimic-code/concepts/make-concepts.sql
+\i ../mimic-code/concepts/firstday/height-first-day.sql
+\i ../mimic-code/concepts/firstday/weight-first-day.sql
 
 \echo 'Step 2 of 3: Generating the mortality-prediction concepts required'
 -- these two must be run first
