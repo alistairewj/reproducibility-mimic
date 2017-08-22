@@ -18,6 +18,7 @@
 \i ../mortality-prediction/queries/static_data.sql
 \i ../mortality-prediction/queries/uo.sql
 \i ../mortality-prediction/queries/vital.sql
+\i ../mortality-prediction/queries/data.sql
 
 \echo 'Step 3 of 3: Generating reproducibility concepts present here'
 \i dm_cohort.sql
