@@ -6,20 +6,20 @@
 
 \echo 'Step 2 of 3: Generating the mortality-prediction concepts required'
 -- these two must be run first
-\i ../mortality-prediction/queries/cohort.sql
-\i ../mortality-prediction/queries/hourly-cohort.sql
+\i mp/cohort.sql
+\i mp/hourly-cohort.sql
 -- order doesn't matter for the rest (except data)
-\i ../mortality-prediction/queries/bg.sql
-\i ../mortality-prediction/queries/code-status.sql
-\i ../mortality-prediction/queries/colloid-bolus.sql
-\i ../mortality-prediction/queries/crystalloid-bolus.sql
-\i ../mortality-prediction/queries/gcs.sql
-\i ../mortality-prediction/queries/lab.sql
-\i ../mortality-prediction/queries/static_data.sql
-\i ../mortality-prediction/queries/uo.sql
-\i ../mortality-prediction/queries/vital.sql
+\i mp/bg.sql
+\i mp/code-status.sql
+\i mp/colloid-bolus.sql
+\i mp/crystalloid-bolus.sql
+\i mp/gcs.sql
+\i mp/lab.sql
+\i mp/static_data.sql
+\i mp/uo.sql
+\i mp/vital.sql
 -- data query needs to be last
-\i ../mortality-prediction/queries/data.sql
+\i mp/data.sql
 
 \echo 'Step 3 of 3: Generating reproducibility concepts present here'
 -- here order matters
