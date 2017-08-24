@@ -21,12 +21,14 @@
 \i ../mortality-prediction/queries/data.sql
 
 \echo 'Step 3 of 3: Generating reproducibility concepts present here'
-\i dm_cohort.sql
+-- here order matters
 \i dm_word_count.sql
-\i dm_static_data.sql
-\i dm_service.sql
-\i dm_obs_count.sql
-\i dm_number_of_notes.sql
+\i dm_cohort.sql
 \i dm_intime_outtime.sql
-\i dm_dialysis_start.sql
+-- for the rest of the queries order is unimportant
 \i dm_braindeath.sql
+\i dm_dialysis_start.sql
+\i dm_static_data.sql
+\i dm_obs_count.sql
+\i dm_service.sql
+\i dm_number_of_notes.sql
