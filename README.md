@@ -1,7 +1,16 @@
 # Reproducibility in MIMIC-III
 Evaluating the reproducibility of mortality prediction studies in the MIMIC-III database
 
-# How to run the code
+# Using this repository
+
+## Requirements
+
+This repository assumes you have:
+
+* The MIMIC-III v1.4 database in a PostgreSQL database (v9.4+)
+* The `TSExact` extension for PostgreSQL (see https://github.com/postgrespro/tsexact for instructions)
+
+## Running the code
 
 First clone this repository recursively: `git clone --recursive https://github.com/alistairewj/reproducibility-mimic.git`.
 
