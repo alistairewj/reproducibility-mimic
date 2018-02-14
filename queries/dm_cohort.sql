@@ -190,10 +190,10 @@ select
   -- 2-year post hospital discharge
   , case
       -- died in hospital
-      when adm.deathtime is not null and adm.deathtime <= adm.dischtime + interval '1' year
+      when adm.deathtime is not null and adm.deathtime <= adm.dischtime + interval '2' year
         then 1
       -- died outside of hospital or during a later readmission to hospital
-      when pat.dod is not null and pat.dod <= adm.dischtime + interval '1' year
+      when pat.dod is not null and pat.dod <= adm.dischtime + interval '2' year
         then 1
       else 0
     end as death_2yr_post_hos_disch
