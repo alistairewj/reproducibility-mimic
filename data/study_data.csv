@@ -1,0 +1,39 @@
+Cohort,Outcome,StudyDetail,N_Study,Y_Study,Model,AUROC_Study,Notes,pages,split,open_code,mimic
+caballero2015dynamically_a,death_in_hospital,$W$=24,11648,-,NonLin,0.8657,KF,10,80/20,0,2
+caballero2015dynamically_b,death_in_hospital,$W$=48,11648,-,NonLin,0.7985,KF,10,80/20,0,2
+caballero2015dynamically_c,death_in_hospital,$W$=72,11648,-,NonLin,0.7385,KF,10,80/20,0,2
+calvert2016computational,death_in_hospital,,3054,12.84,NonLin,0.934,Kernel,6,4-fold CV,0,3
+calvert2016using,death_in_hospital,,9683,10.68,NonLin,0.88,Kernel,6,4-fold CV,0,3
+celi2012database_a,death_in_hospital,AKI,1400,30.7,NonLin,0.875,ANN,11,70/30,0,2
+celi2012database_b,death_in_hospital,SAH,223,25.6,NonLin,0.958,BayesNet,11,70/30,0,2
+che2016recurrent_a,death_in_hospital,(b),4000,13.85,NonLin,0.8424,GRU-D,14,5-fold CV,0,3
+ding2016mortality,death_in_hospital,,4000,13.85,NonLin,0.8177,ELM,6,5-fold CV,0,2
+ghassemi2014unfolding_a,death_in_hospital,$W$=12,19308,10.84,Lin,0.84,SVM-Lin,20,5-fold CV,0,2
+ghassemi2014unfolding_b,death_in_hospital,$W$=24,19308,10.80,Lin,0.841,SVM-Lin,20,5-fold CV,0,2
+ghassemi2015multivariate_a,death_in_hospital,,10202,-,NonLin,0.812,MTGP,20,5-fold CV,0,2
+grnarova2016neural_a,death_in_hospital,,31244,13.82,NonLin,0.963,DNN,5,80/10/10,0,3
+harutyunyan2017multitask,death_in_hospital,,42276,-,NonLin,0.8625,MLSTM,11,70/15/15,1,3
+hoogendoorn2016prediction,death_in_hospital,,13923,-,NonLin,0.841,MLSTM,5,5-fold CV,1,2
+johnson2012patient,death_in_hospital,,4000,-,NonLin,0.8602,BF,4,5-fold CV,0,2
+johnson2014data,death_in_hospital,,4000,-,Lin,0.8457,LR,4,5-fold CV,0,2
+joshi2012prognostic,death_in_hospital,,10066,12.0,Lin,0.89,LR,8,5-fold CV,0,2
+lee2015customization_a,death_in_hospital,,17490,17.73,Lin,0.775,LR,10,10-fold CV,0,2
+lehman2012risk,death_in_hospital,,14739,14.6,Lin,0.82,LR,7,10-fold CV,0,2
+pirracchio2015mortality,death_in_hospital,,24508,12.2,NonLin,0.88,SuperLearner,32,10-fold CV,0,2
+ripoll2014sepsis,death_in_hospital,,2002,21.10,NonLin,0.8223,SVM-Quot - CV and test set,29,80/20,0,2
+che2016recurrent_b,death_48hr_post_icu_admit, (a),19714,8.7,NonLin,0.8527,GRU-D,14,5-fold CV,0,2
+hug2009icu,death_30dy_post_icu_disch,,10066,17.0,Lin,0.879,LR,5,70/30,1,2
+luo2016predicting,death_30dy_post_icu_disch,,7863,17.0,NonLin,0.848,NMF,9,50/50,0,2
+joshi2016identifiable,death_30dy_post_icu_disch,,17000,-,Lin,0.72,RLR,24,5-fold CV,0,2
+ghassemi2014unfolding_c,death_30dy_post_hos_disch, W=12,19308,3.23,Lin,0.761,SVM-Lin,20,5-fold CV,0,2
+grnarova2016neural_b,death_30dy_post_hos_disch,,31244,3.70,NonLin,0.858,DNN,5,80/10/10,0,3
+lee2015personalized,death_30dy_post_hos_disch,,17490,15.1,Lin,0.784,LR,13,10-fold CV,0,2
+lee2015customization_b,death_30dy_post_hos_disch,,17490,23.56,Lin,0.762,LR,10,10-fold CV,0,2
+lee2017patient,death_30dy_post_hos_disch,,17152,15.1,Lin,0.815,LR,4,10-fold CV,0,2
+luo2016interpretable_a,death_30dy_post_hos_disch,,18412,3.4,NonLin,0.86,SVM-BRF,9,50/50,0,2
+wojtusiak2017c,death_30dy_post_hos_disch,,21651,,NonLin,0.734,RF,9,80/20,0,3
+luo2016interpretable_b,death_6mo_post_hos_disch,,18412,9.5,NonLin,0.842,SVM-RBF,9,50/50,0,2
+ghassemi2014unfolding_d,death_1yr_post_hos_disch, W=12,19308,3.34,Lin,0.743,SVM-Lin,20,5-fold CV,0,2
+ghassemi2015multivariate_b,death_1yr_post_hos_disch,,10202,-,NonLin,0.686,MTGP,20,5-fold CV,0,2
+grnarova2016neural_c,death_1yr_post_hos_disch,,31244,12.06,NonLin,0.853,DNN,5,80/10/10,0,3
+lee2015customization_c,death_2yr_post_hos_disch,,17152,43.82 ,Lin,0.83,LR,10,10-fold CV,0,2
