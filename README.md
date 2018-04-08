@@ -1,14 +1,12 @@
 # Reproducibility in MIMIC-III
-Evaluating the reproducibility of mortality prediction studies in the MIMIC-III database
+This repository is evaluates the reproducibility of mortality prediction studies in the MIMIC-III database.
+This study was presented at the Machine Learning in Healthcare (MLHC 2017) conference, and you can find the paper [here](http://proceedings.mlr.press/v68/johnson17a.html) ([pdf](http://proceedings.mlr.press/v68/johnson17a/johnson17a.pdf)).
 
 # Using this repository
 
 ## Requirements
 
-This repository assumes you have:
-
-* The MIMIC-III v1.4 database in a PostgreSQL database (v9.4+)
-* The `TSExact` extension for PostgreSQL (see https://github.com/postgrespro/tsexact for instructions)
+This repository assumes you have the MIMIC-III v1.4 database in a PostgreSQL database (v9.6+).
 
 ## Running the code
 
@@ -27,6 +25,28 @@ Once that is generated, you can run the notebooks present in the `notebooks` sub
 
 # Acknowledgement
 
+This repository can be cited using the following persistent Digital Object Identifier (DOI):
+
 [![DOI](https://zenodo.org/badge/97237814.svg)](https://zenodo.org/badge/latestdoi/97237814)
 
-You can cite the code in this repository using the above DOI.
+If you do find this repository useful in your work, we would be grateful if you would also cite our MLHC paper:
+
+Johnson, A.E.W., Pollard, T.J. &amp; Mark, R.G.. (2017). Reproducibility in critical care: a mortality prediction case study. <i>Proceedings of the 2nd Machine Learning for Healthcare Conference, in PMLR</i> 68:361-376
+
+```
+@InProceedings{johnson17reproducibility,
+  title = 	 {Reproducibility in critical care: a mortality prediction case study},
+  author = 	 {Alistair E. W. Johnson and Tom J. Pollard and Roger G. Mark},
+  booktitle = 	 {Proceedings of the 2nd Machine Learning for Healthcare Conference},
+  pages = 	 {361--376},
+  year = 	 {2017},
+  editor = 	 {Finale Doshi-Velez and Jim Fackler and David Kale and Rajesh Ranganath and Byron Wallace and Jenna Wiens},
+  volume = 	 {68},
+  series = 	 {Proceedings of Machine Learning Research},
+  address = 	 {Boston, Massachusetts},
+  month = 	 {18--19 Aug},
+  publisher = 	 {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v68/johnson17a/johnson17a.pdf},
+  url = 	 {http://proceedings.mlr.press/v68/johnson17a.html}
+}
+```
